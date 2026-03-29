@@ -84,7 +84,7 @@ ui <- fluidPage(
     "))
   ),
   
-  titlePanel("Gemeinsame Antwortauswertung"),
+  titlePanel(""),
   
   fluidRow(
     column(

@@ -1,0 +1,12 @@
+name: Hypothesen
+title: Hypothesen
+username: kaihusmann
+account: kaihusmann
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 17010434
+bundleId: 11776914
+url: https://kaihusmann.shinyapps.io/Hypothesen/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
