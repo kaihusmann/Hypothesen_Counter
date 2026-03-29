@@ -161,7 +161,7 @@ server <- function(input, output, session) {
   observeEvent(input$reset2, {
     if (is.null(input$reset_pw2) || input$reset_pw2 != reset_password) {
       showNotification("Incorrect password for diagram 2 reset.", type = "error")
-      return()
+      return()#
     }
     
     counts <- read_counts()
