@@ -5,7 +5,7 @@ account: kaihusmann
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 17010434
-bundleId: 11776928
+bundleId: 11900520
 url: https://kaihusmann.shinyapps.io/Hypothesen/
 version: 1
 asMultiple: FALSE
