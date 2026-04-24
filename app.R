@@ -13,6 +13,8 @@ labels_de <- c(
   disagree = "Stimme nicht zu"
 )
 
+options(shiny.maxRequestSize = 30*1024^2)  # optional
+
 initialize_counts <- function() {
   list(
     question1 = c(agree = 0, disagree = 0),
@@ -123,6 +125,16 @@ ui <- fluidPage(
 # -------------------------------
 
 server <- function(input, output, session) {
+  
+  # Keep session alive for 2 hours (7200 seconds)
+  session$allowReconnect(TRUE)
+  
+  autoInvalidate <- reactiveTimer(1000 * 60 * 30)  # ping every 30 min
+  
+  observe({
+    autoInvalidate()
+    cat("Session kept alive\n")
+  })
   
   refresh_trigger <- reactiveVal(0)
   reset_ui_trigger1 <- reactiveVal(0)
